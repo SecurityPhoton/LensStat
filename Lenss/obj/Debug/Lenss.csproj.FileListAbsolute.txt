@@ -1,0 +1,10 @@
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\bin\Debug\Lenss.exe.config
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.csprojResolveAssemblyReference.cache
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.Form1.resources
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.Properties.Resources.resources
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.csproj.GenerateResource.Cache
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\bin\Debug\Lenss.exe
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\bin\Debug\Lenss.pdb
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\bin\Debug\ExifLib.dll
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.exe
+c:\users\vb\documents\visual studio 2013\Projects\Lenss\Lenss\obj\Debug\Lenss.pdb
