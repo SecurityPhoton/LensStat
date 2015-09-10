@@ -112,6 +112,8 @@ namespace Lenss
             var  ListCam = new List<Camera>();
             var ListLens = new List<Lens>() ;
 
+            //L1.Add(new Camera { CameraID = check.Camera, CamCount = 1 });
+
             progressBar1.Minimum = 0;
 
             this.chart1.Series["Focal"].Points.Clear();
@@ -123,6 +125,7 @@ namespace Lenss
             chart2.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineWidth = 0;
             MyGraphNum init = new MyGraphNum();
             MyGraphNum init2 = new MyGraphNum();
+            textBox4.Clear();
 
             folderBrowserDialog1.ShowDialog();
             var files = Directory.EnumerateFiles(folderBrowserDialog1.SelectedPath, "*.*", SearchOption.AllDirectories)
@@ -142,7 +145,10 @@ namespace Lenss
                 {
                     progressBar1.Value++;
                     temp = RFocus(item);
-                    CamereLensId(ListCam, ListLens, temp);
+
+                    ListCam.Add(new Camera { CameraID = temp.Camera, CamCount = 1 });
+                    ListLens.Add(new Lens { LensID = temp.Lens, LensCount = 1 });
+                    //CamereLensId(ListCam, ListLens, temp);
                     if (!String.IsNullOrEmpty(Convert.ToString(temp.Focal)))
                     {
                         temp1 = Convert.ToInt32(Math.Round(temp.Focal, 0));
@@ -202,16 +208,28 @@ namespace Lenss
             this.chart2.Series["Aperture"].Points.AddXY("10<x", init2.Six);
 
             textBox4.AppendText("Cameras:\n");
-            foreach (var item in ListCam)
+            var Listofcameramodels = ListCam.Select(x => x.CameraID).Distinct();
+            foreach (var item in Listofcameramodels)
             {
-                textBox4.AppendText(item.CameraID+" - "+item.CamCount+"\n");
+                if (!String.IsNullOrWhiteSpace(item))
+                {
+                    textBox4.AppendText(item + "\n");
+                }
+                
             }
 
+            var Listoflensmodels = ListLens.Select(x => x.LensID).Distinct();
             textBox4.AppendText("Lenses:\n");
-            foreach (var item in ListLens)
+            foreach (var item in Listoflensmodels)
             {
-                textBox4.AppendText(item.LensID+" - "+item.LensCount+"\n");
-            }
+                if (!String.IsNullOrWhiteSpace(item))
+                {
+                    textBox4.AppendText(item + "\n");
+                }
+                
+            }         
+                
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

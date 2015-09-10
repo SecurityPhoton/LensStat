@@ -182,6 +182,7 @@
             this.textBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox4.Size = new System.Drawing.Size(218, 131);
             this.textBox4.TabIndex = 7;
+            this.textBox4.WordWrap = false;
             // 
             // Form1
             // 
